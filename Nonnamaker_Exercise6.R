@@ -17,7 +17,7 @@ str (flowers)
 # I want to find first ten entries for  sepal width 
 head(flowers$Sepal.Width, n=10)
 
-### Brittni: We wanted you to recreate head without using it. I took off 0.5 points
+### Brittni: We wanted you to recreate head without using it. I took off 0.2 points
 ## nlines=10
 ## flowers[1:nlines,]
 
@@ -56,7 +56,7 @@ length(setosa) # it's 5
 versicolor = subset(flowers, flowers$Species=="versicolor")
 length(versicolor) # it's also 5, they're all 5. 
 
-### Brittni: length() actually counts the number of columns, not the number of rows (observations). You would want to use nrow(), and this would give you 50 for all. I took off 0.25 points.
+### Brittni: length() actually counts the number of columns, not the number of rows (observations). You would want to use nrow(), and this would give you 50 for all. I took off 0.1 points.
 
 # get rows with sepal.width > 3.5: 
 flowers[flowers$Sepal.Width > "3.5",]
