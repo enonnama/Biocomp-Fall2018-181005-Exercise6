@@ -17,6 +17,10 @@ str (flowers)
 # I want to find first ten entries for  sepal width 
 head(flowers$Sepal.Width, n=10)
 
+### Brittni: We wanted you to recreate head without using it. I took off 0.5 points
+## nlines=10
+## flowers[1:nlines,]
+
 ## 2 ##
 
 # Load the data contained in the provided ‘iris.csv’ file and write R code to 
@@ -34,6 +38,8 @@ tail(flowers)
 # in conjunction with last two columns, 4 and 5:
 tail(flowers[c(149:150),c(4:5)])
 
+### Brittni: The tail part is actually redundant. flowers[c(149:150),c(4:5)] works perfectly
+
 # It's this:
 #Petal.Width   Species
 #149         2.3 virginica
@@ -50,9 +56,12 @@ length(setosa) # it's 5
 versicolor = subset(flowers, flowers$Species=="versicolor")
 length(versicolor) # it's also 5, they're all 5. 
 
+### Brittni: length() actually counts the number of columns, not the number of rows (observations). You would want to use nrow(), and this would give you 50 for all. I took off 0.25 points.
 
 # get rows with sepal.width > 3.5: 
 flowers[flowers$Sepal.Width > "3.5",]
+
+### Brittni: I'm not entirely sure why this works, but you shouldn't use quotes since you're asking it to consider Sepal.Width numeric
 
 # write just the setosa observations into a csv: 
 setosa <- flowers[flowers$Species == "setosa",]
